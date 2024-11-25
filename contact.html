@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FIDUS INDIA AUTOMATION PVT. LTD.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .main-nav {
+            background-color: #000;
+            padding: 15px 0;
+        }
+        
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        /* Contact Icons */
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .icon-circle {
+            width: 100px;
+            height: 100px;
+            background-color: #33ccff;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+        }
+        
+        /* Contact Container */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        /* Google Form Styles */
+        .google-form iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+        
+        /* Company Info */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: #666;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .tab-btn.active {
+            color: red;
+            border-bottom-color: red;
+        }
+        
+        .company-details {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+        
+        .company-details h2 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .company-details p {
+            text-align: center;
+            color: #333;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        
+            .contact-icons {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        
+            .icon-circle {
+                width: 80px;
+                height: 80px;
+                font-size: 30px;
+            }
+        
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        
+            .tabs {
+                flex-wrap: wrap;
+            }
+        
+            .tab-btn {
+                flex: 1;
+                min-width: 120px;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .icon-circle {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+        
+            .tab-btn {
+                min-width: 100px;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+    
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">BRANDS</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="#">AUTHORISED DISTRIBUTOR</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="contact-icons">
+            <div class="icon">
+                <span class="icon-circle">@</span>
+            </div>
+            <div class="icon">
+                <span class="icon-circle">☎</span>
+            </div>
+            <div class="icon">
+                <span class="icon-circle">✉</span>
+            </div>
+            <div class="icon">
+                <span class="icon-circle">📍</span>
+            </div>
+        </div>
+
+        <div class="contact-container">
+            <div class="google-form">
+                <!-- Embed Google Form here -->
+                <iframe src="https://forms.gle/qRoZfA6gLHbzn62e8"></iframe>
+            </div>
+
+            <div class="company-info">
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="changeTab('companyName')">Company Name</button>
+                    <button class="tab-btn" onclick="changeTab('address')">Address</button>
+                    <button class="tab-btn" onclick="changeTab('email')">Email</button>
+                    <button class="tab-btn" onclick="changeTab('contact')">Contact</button>
+                </div>
+                <div class="company-details">
+                    <div id="companyName" class="tab-content">
+                        <h2>FIDUS INDIA AUTOMATION PVT. LTD.</h2>
+                    </div>
+                    <div id="address" class="tab-content" style="display:none;">
+                        <p>123, Industrial Area, XYZ City, India</p>
+                    </div>
+                    <div id="email" class="tab-content" style="display:none;">
+                        <p>contact@fidusindia.com</p>
+                    </div>
+                    <div id="contact" class="tab-content" style="display:none;">
+                        <p>+91 123 456 7890</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeTab(tabName) {
+            // Hide all tab content
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.style.display = 'none');
+
+            // Remove active class from all buttons
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(button => button.classList.remove('active'));
+
+            // Show the selected tab and add active class to the button
+            document.getElementById(tabName).style.display = 'block';
+            const activeButton = document.querySelector(`.tab-btn[onclick="changeTab('${tabName}')"]`);
+            activeButton.classList.add('active');
+        }
+    </script>
+</body>
+</html>

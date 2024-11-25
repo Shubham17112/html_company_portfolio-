@@ -1,0 +1,189 @@
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+        }
+        
+        .about-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a2744 0%, #1a3c5f 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('globe-hands.jpg') center/cover no-repeat;
+            opacity: 0.2;
+            z-index: 1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo {
+            margin-bottom: 2rem;
+        }
+        
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+        
+        .company-details {
+            margin-bottom: 3rem;
+        }
+        
+        .company-details h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+        
+        .contact-info {
+            color: #fff;
+            opacity: 0.9;
+        }
+        
+        .contact-info p {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .about-content {
+            max-width: 600px;
+            margin-left: auto;
+        }
+        
+        .about-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+        
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .footer p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+        
+            .company-details h2 {
+                font-size: 1.5rem;
+            }
+        
+            .about-content {
+                margin-left: 0;
+            }
+        
+            .about-content h1 {
+                font-size: 2rem;
+            }
+        
+            .footer .container {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .company-details h2 {
+                font-size: 1.2rem;
+            }
+        
+            .about-content h1 {
+                font-size: 1.8rem;
+            }
+        
+            .contact-info p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+    <section class="about-section">
+        <div class="container">
+            <div class="logo">
+                <img src="fi-logo.png" alt="FI Logo">
+            </div>
+            
+            <div class="company-details">
+                <h2>Fidus India Automation Pvt. Ltd.</h2>
+                <div class="contact-info">
+                    <p class="address">
+                        <i class="location-icon">📍</i>
+                        Plot 641/1/17, Shivaji Nagar, Near SD School, Gurgaon 122001, Haryana, India
+                    </p>
+                    <p class="phone">
+                        <i class="phone-icon">📞</i>
+                        Phone: 0124-2979641, +91-9811348738
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <h1>About Us</h1>
+                <p>We as a Team of FIDUS INDIA started this business Endeavour in Year 2011, with Aim of Meeting the Global Demand for various types of Globally and India Manufactured Industrial Goods. We have gained huge Trust and Experience, to Satisfy all Our Customer needs timely.</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="copyright">© 2021 FIDUS INDIA. All rights reserved</p>
+                <p class="email">Email: info@fidusindia.com</p>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

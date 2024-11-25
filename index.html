@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIAPL - Industrial Automation Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        /* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #f8f8f8;
+    padding: 5px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-bar span {
+    margin-left: 20px;
+}
+
+/* Main Header */
+.main-header {
+    padding: 20px 0;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+}
+
+.info-box {
+    text-align: center;
+    margin-right: 30px;
+}
+
+.info-box h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: #666;
+}
+
+.cta-button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0052a3;
+}
+
+/* Main Navigation */
+.main-nav {
+    background-color: #000;
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-nav ul li {
+    margin-right: 20px;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: #ccc;
+}
+
+/* Hero Section */
+.hero {
+    position: relative; /* Ensures the pseudo-element is positioned relative to the .hero section */
+    background-image: url('bg.webp'); /* Replace with the actual image path */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: white; /* Text color for readability */
+    padding: 100px 20px; /* Adds padding to the section */
+    text-align: center; /* Centers the text */
+    overflow: hidden; /* Ensures the pseudo-element does not overflow */
+}
+
+.hero::before {
+    content: ''; /* Required to create the pseudo-element */
+    position: absolute; /* Positions the overlay relative to the .hero section */
+    top: 0; /* Aligns the overlay to the top */
+    left: 0; /* Aligns the overlay to the left */
+    right: 0; /* Aligns the overlay to the right */
+    bottom: 0; /* Aligns the overlay to the bottom */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay (50% opacity) */
+    z-index: 1; /* Ensures the overlay appears below the content */
+}
+
+.hero .container {
+    position: relative; /* Ensures the content is above the overlay */
+    z-index: 2; /* Places content above the overlay */
+    max-width: 800px; /* Optional: Sets a max-width for better layout */
+    margin: 0 auto; /* Centers the container horizontally */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background-color: white;
+    color: #0066cc;
+}
+
+.btn-primary:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #0066cc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+      
+    }
+
+    .header-info {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .info-box {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+}
+.footer {
+    background-image: url('footer-bg.webp'); /* Add your background image here */
+    background-size: cover; /* Ensures the background image covers the entire footer */
+    background-position: center; /* Centers the background image */
+    color: white; /* Light text for readability */
+    padding: 40px 20px;
+    text-align: left;
+    position: relative; /* Allows content layering */
+    z-index: 1;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #0066cc; /* Matching with the primary color */
+}
+
+.footer-column p {
+    font-size: 14px;
+    color: #ddd; /* Slightly lighter text */
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+
+
+    </style>
+   
+    <div class="top-bar">
+        <div class="container">
+            <span>Opening time: Mon-Fri 08:00 - 18:00</span>
+            <span>Email: info@fidusindia.com</span>
+            <span>Phone: 0124-2979641</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.jpg" alt="FIAPL Logo" width="150" height="50">
+            </div>
+            <div class="header-info">
+                <div class="info-box">
+                    <h3>Solution</h3>
+                    <p>Complete Solution For Industrial Needs</p>
+                </div>
+                <div class="info-box">
+                    <h3>Support</h3>
+                    <p>MRO Goods Support Oriented</p>
+                </div>
+                <button class="cta-button" onclick="window.location.href='contact.html';">Get a Quote</button>
+                
+
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">BRANDS</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="#">AUTHORISED DISTRIBUTOR</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container" >
+            <h1>Import & Export House of Complete Industrial Automation & MRO Goods</h1>
+            <p>New, Original and Genuine Supply support since 10+ Years to more than 200+ Prominent Clients</p>
+            <div class="hero-buttons">
+               <a href="about.html"  class="btn btn-primary" >About Us</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+
+    </section>
+    <div id="content"></div>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>FIAPL offers complete solutions for industrial automation needs with over 10 years of experience, serving 200+ prominent clients globally.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Email: info@fidusindia.com</p>
+                    <p>Phone: 0124-2979641</p>
+                    <p>Address: XYZ Industrial Area, Delhi, India</p>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
+                        <a href="#" target="_blank" class="social-icon"><img src="twitter-icon.png" alt="Twitter"></a>
+                        <a href="#" target="_blank" class="social-icon"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+          
+
+            <script>
+              fetch('test.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('content').innerHTML = data);
+            </script>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 FIAPL. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+
+</body>
+
+
+</html>
+
